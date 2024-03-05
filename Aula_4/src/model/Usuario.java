@@ -5,7 +5,7 @@ public class Usuario {
 	
 	private boolean Estalogado = false;
 	
-	Usuario (String Nome, String CPF, String Celular, String Email, String Senha) {
+	public Usuario (String Nome, String CPF, String Celular, String Email, String Senha) {
 		this.Nome = Nome;
 		this.CPF = CPF;
 		this.Celular = Celular;
