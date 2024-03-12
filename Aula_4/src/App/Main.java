@@ -29,24 +29,33 @@ public class Main {
 			switch(opcaoNum) {
 			case 1:
 				String nomeBanco;
-				nomeBanco = mensagem.solicitarEntrada("Digite o Nome do Banco");
+				nomeBanco = mensagem
+						.solicitarEntrada("Digite o Nome do Banco");
 					Banco novoBanco = new Banco(nomeBanco);
 					mensagem.mostrarMensagemDeSucesso(
 							"Banco Cadastrado com sucesso"
 							+ novoBanco.getBanco()
 							);
-				break;
+			break;
+				
+			case 2:
+				Nome = mensagem.solicitarEntrada("Digite seu nome");
+				CPF = mensagem.solicitarEntrada("Digite seu CPF");
+				Celular = mensagem.solicitarEntrada("Digite seu Celular");
+				Email = mensagem.solicitarEntrada("Digite seu Email");
+				Senha = mensagem.solicitarEntrada("Digite seu Senha");
+				Usuario usuario = new Usuario(Nome, CPF, Celular,Email, Senha);
+				mensagem.mostrarMensagemDeSucesso(usuario.getUsuario());
+				
+			break;
+				
+			case 3:
+				System.exit(0);
+			break;
+			
 			}
 			
-			Nome = mensagem.solicitarEntrada("Digite seu nome");
-			CPF = mensagem.solicitarEntrada("Digite seu CPF");
-			Celular = mensagem.solicitarEntrada("Digite seu Celular");
-			Email = mensagem.solicitarEntrada("Digite seu Email");
-			Senha = mensagem.solicitarEntrada("Digite seu Senha");
-			Usuario usuario = new Usuario(Nome, CPF, Celular,Email, Senha);
-			mensagem.mostrarMensagemDeSucesso(usuario.getUsuario());
-			opcao = "ok";
-			
+
 		}while(opcao == "ok");
 		
 	}

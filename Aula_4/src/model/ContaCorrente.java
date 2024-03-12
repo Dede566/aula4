@@ -3,7 +3,7 @@ package model;
 public class ContaCorrente extends Conta {
 	private double ValorTaxa; 
 
-	ContaCorrente(String email, double ValorTaxa) {
+	public ContaCorrente(String email, double ValorTaxa) {
 		super(email);
 		this.ValorTaxa = ValorTaxa;
 		// TODO Auto-generated constructor stub
